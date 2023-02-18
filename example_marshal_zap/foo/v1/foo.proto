@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package foo.v1;
+
+option go_package = "github.com/kei2100/playground-buf/example_marshal_zap/foo/v1;foov1";
+
+// If you want to use "marshal_zap.mask" option, import "marshal-zap.proto"
+import "marshal-zap.proto";
+
+message FooMessage {
+  string message = 1;
+  string secret_message = 2 [(marshal_zap.mask) = true];
+}

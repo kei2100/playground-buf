@@ -1,0 +1,9 @@
+version: v1
+deps:
+  - buf.build/kei2100/protoc-gen-marshal-zap
+breaking:
+  use:
+    - FILE
+lint:
+  use:
+    - DEFAULT
